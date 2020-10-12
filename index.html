@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Russo+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <!-- Header -->
@@ -18,37 +19,64 @@
   <div class="row my-custom-row">
     <div class="col full-height-relative">
       <h1 class="game-title">STAR MINER</h1>
-    </div> 
-    <div class="col full-height-relative">
-      One of three columns
     </div>
     <div class="col full-height-relative">
-      One of three columns
-    </div>
-  </div>
-  <div class="row my-custom-row">
-    <div class="col full-height-relative">
-      One of three columns
-    </div>
-    <div class="col full-height-relative">
-      <img class="black-hole" src="https://media.giphy.com/media/j3ba4uTQTZlRZe0LXb/giphy.gif" alt="">
-    </div>
-    <div class="col full-height-relative">
-      One of three columns
+      <div class="card w-50 inventory">
+        <div class="card-body text-white">
+          <h5 class="card-title text-primary">INVENTORY</h5>
+          <span id='stars' class="text-danger">Stars: </span>
+          <p>Laser: </p>
+          <p>Force: </p>
+          <p>Gravity Gun: </p>
+          <p>Space Vaccum: </p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row my-custom-row">
     <div class="col full-height-relative">
-      One of three columns
+      <div class="card w-50 stats">
+        <div class="card-body text-white">
+          <h5 class="card-title text-primary">STATS</h5>
+          <span id="clicks">SPS: </span>
+          <p>TSM(total star multiplier): </p>
+        </div>
+      </div>
+    </div>
+    <div class="col full-height-relative">
+      <button class="black-hole-button" onclick="mine()">
+        <img class="black-hole" src="https://media.giphy.com/media/j3ba4uTQTZlRZe0LXb/giphy.gif" alt="">
+      </button>
+      <img class="star star-1-positioning" src="star1.gif" alt="">
+      <img class="star star-2-positioning" src="star2.gif" alt="">
+      <img class="star star-3-positioning" src="star3.gif" alt="">
+      <img class="star star-4-positioning" src="star4.gif" alt="">
+    </div>
+    <div class="col full-height-relative">
+      <img src="shootingstar.gif" alt="">
+    </div>
+  </div>
+  <footer class="row my-custom-row">
+    <div class="col full-height-relative">
+      <div class="col full-height-relative">
+        <div class="card store">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Store</h5>
+            <button id="laser" type="button" class="btn btn-outline-success" onclick="purchaseUpgrade('laser')">Laser</button>
+            <button id="force" type="button" class="btn btn-outline-success" onclick="purchaseAutoUpgrade('force')">Force</button>
+            <button id="gravityGun" type="button" class="btn btn-outline-success" onclick="purchaseUpgrade('gravityGun')">Gravity Gun</button>
+            <button id="spaceVaccum" type="button" class="btn btn-outline-success" onclick="purchaseAutoUpgrade('spaceVaccum')">Space Vaccum</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col full-height-relative">
       One of three columns
     </div>
     <div class="col full-height-relative">
-      One of three columns
+      <button class="btn btn-outline-danger mt-5" onclick="startGame()">START GAME</button>
     </div>
-  </div>
-  </div>
+  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
