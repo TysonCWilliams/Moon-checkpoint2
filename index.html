@@ -37,7 +37,7 @@
     <div class="col full-height-relative">
       <div class="card w-50 stats">
         <div class="card-body text-white">
-          <h5 class="card-title text-primary">STATS</h5>
+          <h5 class="card-title text-primary text-center">STATS</h5>
           <span id="clicks">SPS: </span>
           <p>TSM(total star multiplier): </p>
         </div>
@@ -58,23 +58,24 @@
   </div>
   <footer class="row my-custom-row">
     <div class="col full-height-relative">
-      <div class="col full-height-relative">
-        <div class="card store">
-          <div class="card-body">
-            <h5 class="card-title text-primary">Store</h5>
-            <button id="laser" type="button" class="btn btn-outline-success" onclick="purchaseUpgrade('laser')">Laser</button>
-            <button id="force" type="button" class="btn btn-outline-success" onclick="purchaseAutoUpgrade('force')">Force</button>
-            <button id="gravityGun" type="button" class="btn btn-outline-success" onclick="purchaseUpgrade('gravityGun')">Gravity Gun</button>
-            <button id="spaceVaccum" type="button" class="btn btn-outline-success" onclick="purchaseAutoUpgrade('spaceVaccum')">Space Vaccum</button>
-          </div>
+      <div class="card store">
+        <div class="card-body">
+          <h5 class="card-title text-primary text-center">Store</h5>
+          <button id="laser" type="button" class="btn btn-outline-success btn-block"
+            onclick="purchaseUpgrade('laser')">Laser</button>
+          <button id="force" type="button" class="btn btn-outline-success btn-block"
+            onclick="purchaseAutoUpgrade('force')">Force</button>
+          <button id="gravityGun" type="button" class="btn btn-outline-success btn-block"
+            onclick="purchaseUpgrade('gravityGun')">Gravity Gun</button>
+          <button id="spaceVaccum" type="button" class="btn btn-outline-success btn-block"
+            onclick="purchaseAutoUpgrade('spaceVaccum')">Space Vaccum</button>
         </div>
       </div>
     </div>
     <div class="col full-height-relative">
-      One of three columns
+      <button class="btn btn-outline-danger btn-lg btn-block mt-5" onclick="startGame()">START GAME</button>
     </div>
     <div class="col full-height-relative">
-      <button class="btn btn-outline-danger mt-5" onclick="startGame()">START GAME</button>
     </div>
   </footer>
   <!-- Optional JavaScript -->

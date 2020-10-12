@@ -5,6 +5,7 @@
 .store{
   background-color: black;
   border-color: #76FF03;
+  height: fit-content;
 }
 
 .stats{

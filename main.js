@@ -44,7 +44,7 @@ function purchaseUpgrade(upgradeName) {
   // accessing clickUpgrades[keyname]
 
   let alreadyHasUpgrade = gameProps.inventory.filter(u => u.name == upgrade.name).length > 0
-  // This is how we tell whether or not our inventory has the upgrade or not 
+  // Whether we have upgrade or not
 
   if (gameProps.stars >= upgrade.price && alreadyHasUpgrade === false) {
     gameProps.inventory.push(upgrade)
@@ -59,7 +59,7 @@ function purchaseAutoUpgrade(upgradeName) {
   // accessing clickUpgrades[keyname]
 
   let alreadyHasUpgrade = gameProps.inventory.filter(u => u.name == upgrade.name).length > 0
-  // This is how we tell whether or not our inventory has the upgrade or not 
+  //Whether we have upgrade or not
   console.log(console.log(upgrade.price))
   if (gameProps.stars >= upgrade.price && alreadyHasUpgrade === false) {
     gameProps.inventory.push(upgrade)
@@ -192,58 +192,6 @@ function updateGameStats(starsToAdd) {
     enableSpaceVaccumButton()
   }
 }
-
-
-
-// function multiplyMoneyGain() {
-//   moneyGain = moneyGain * 2;
-//   purchaseLevel++;
-//   updateAndDisable("purchase", price);
-// }
-
-// function autoMoney(amount) {
-//   clearInterval(theInterval);
-//   theInterval = setInterval(function(){ money = money + autoGain; updateMoney(); }, 200 / amount);
-//   purchaseLevelTwo++;
-//   updateAndDisable("purchase-two", priceTwo);
-// }
-
-// //money = Number(localStorage.getItem('storedMoney'));
-
-// var element = {
-//   clicks     : document.getElementById("clicks"),
-//   clicker     : document.getElementById("clicker"),
-//   purchase    : document.getElementById("purchase"),
-//   purchaseTwo : document.getElementById("purchase-two"),
-//   stars: document.getElementById("money"),
-// }
-
-// updateMoney();
-// updatePurchase();
-// updatePurchaseTwo();
-
-// /*element.clicker.addEventListener("click", updateClickCounter);*/
-
-// element.clicker.onclick = function() { addMoney(); updateMoney(); };
-
-
-// function updateClickCounter() {
-//   clickCounter++;
-//   element.clicks.innerHTML = "Clicks: " + clickCounter;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
