@@ -6,7 +6,7 @@ let gameProps = {
 
 let clickUpgrades = {
   laser: {
-    price: 3,
+    price: 5,
     multiplier: 2,
     name: "Laser",
     automatic: false
@@ -21,13 +21,13 @@ let clickUpgrades = {
 
 let automaticUpgrades = {
   force: {
-    price: 5,
-    multiplier: 20,
+    price: 50,
+    multiplier: 15,
     name: "Force",
     automatic: true
   },
   spaceVaccum: {
-    price: 1,
+    price: 100,
     multiplier: 20,
     name: "Space Vaccum",
     automatic: true
