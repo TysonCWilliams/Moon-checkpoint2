@@ -34,7 +34,7 @@ let automaticUpgrades = {
   }
 };
 
-
+disableAllButtons()
 // NOTE This is purchaseUpgrade & purshaseAutoUpgrade
 
 function purchaseUpgrade(upgradeName) {
@@ -65,7 +65,7 @@ function purchaseAutoUpgrade(upgradeName) {
     gameProps.inventory.push(upgrade)
     // Push to array to add to inventory
   }
-  
+
   console.log(gameProps.inventory)
 }
 
@@ -75,7 +75,7 @@ function mineAutomatic() {
 
   let starCount = 0
 
-  
+
   let autoUpgrades = gameProps.inventory.filter(i => i.automatic == true)
 
   if (autoUpgrades.length > 0) {
@@ -92,6 +92,8 @@ function mineAutomatic() {
 
 function mine() {
 
+  enableAllButtons()
+
   if (gameProps.stars == 0) {
     startGame()
   }
@@ -99,7 +101,7 @@ function mine() {
   let starCount = 0
 
   let clickUpgrades = gameProps.inventory.filter(i => i.automatic === false)
-  
+
   if (clickUpgrades.length > 0) {
     for (let i = 0; i < clickUpgrades.length; i++) {
       starCount += clickUpgrades[i].multiplier
@@ -137,6 +139,8 @@ function startGame() {
 
   disableAllButtons()
 
+
+
   gameProps = {
     stars: 0,
     inventory: [],
@@ -144,11 +148,12 @@ function startGame() {
   }
 
 
+
   let interval = 3000;
   // 3 seconds 
 
   setInterval(() => {
-    mineAutomatic()
+    // mineAutomatic()
   }, interval);
 }
 
@@ -157,7 +162,7 @@ removeStars()
 
 
 function updateGameStats(starsToAdd) {
-  
+
   gameProps.stars += starsToAdd;
   let starCounter = document.getElementById('stars')
   starCounter.innerText = 'Stars: ' + gameProps.stars
@@ -165,6 +170,7 @@ function updateGameStats(starsToAdd) {
   gameProps.clicks++
   let clickCounter = document.getElementById('clicks')
   clickCounter.innerText = 'Clicks: ' + gameProps.clicks
+
 
 
   // NOTE Checking for upgrade and enabling button
@@ -216,7 +222,7 @@ function enableSpaceVaccumButton() {
 
 
 // NOTE This is more Visual stuff
- 
+
 function disableAllButtons() {
   let allButtons = document.getElementsByClassName("btn");
   let i;
